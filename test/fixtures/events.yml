@@ -1,9 +1,41 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  started_at: 2026-04-26 12:25:07
+macos_10_12:
+  name: macOS 10.12 Sierra
+  started_at: 2016-09-20 00:00:00
 
-two:
-  name: MyString
-  started_at: 2026-04-26 12:25:07
+macos_10_13:
+  name: macOS 10.13 High Sierra
+  started_at: 2017-09-25 00:00:00
+
+macos_10_14:
+  name: macOS 10.14 Mojave
+  started_at: 2018-09-24 00:00:00
+
+macos_10_15:
+  name: macOS 10.15 Catalina
+  started_at: 2019-10-07 00:00:00
+
+macos_11_0:
+  name: macOS 11 Big Sur
+  started_at: 2020-11-12 00:00:00
+
+macos_12_0:
+  name: macOS 12 Monterey
+  started_at: 2021-10-25 00:00:00
+
+macos_13_0:
+  name: macOS 13 Ventura
+  started_at: 2022-10-24 00:00:00
+
+macos_14_0:
+  name: macOS 14 Sonoma
+  started_at: 2023-09-26 00:00:00
+
+macos_15_0:
+  name: macOS 15 Sequoia
+  started_at: 2024-09-16 00:00:00
+
+macos_26_0:
+  name: macOS 26 Tahoe
+  started_at: 2025-09-15 00:00:00
