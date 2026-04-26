@@ -1,0 +1,26 @@
+require "test_helper"
+
+class TimeHelperTest < ActionView::TestCase
+  DATETIME = Time.new(2020, 02, 26, 21, 58, 19, "+09:00")
+
+  test "local_datetime" do
+    assert_equal  \
+      %(21:58),
+      local_datetime(DATETIME)
+    assert_equal  \
+      %(21:58),
+      local_datetime(DATETIME, style: :time)
+    assert_equal  \
+      %(2020/02/26),
+      local_datetime(DATETIME, style: :date)
+    assert_equal  \
+      %(2020/02/26 21:58),
+      local_datetime(DATETIME, style: :datetime)
+    assert_raises(ArgumentError, match: "Unknown style: foo.") do
+      local_datetime(DATETIME, style: :foo)
+    end
+    assert_raises(NoMethodError) do
+      local_datetime(nil)
+    end
+  end
+end
