@@ -12,4 +12,8 @@ module TimeHelper
     end
     datetime.strftime(format)
   end
+
+  def local_datetime_tag(datetime, style: :time)
+    tag.time datetime: datetime do local_datetime(datetime, style: style) end
+  end
 end

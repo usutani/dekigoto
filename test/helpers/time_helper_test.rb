@@ -23,4 +23,11 @@ class TimeHelperTest < ActionView::TestCase
       local_datetime(nil)
     end
   end
+
+  # TODO: タイムゾーンの設定方法
+  test "local_datetime_tag" do
+    assert_dom_equal \
+      %(<time datetime="2020-02-26 21:58:19 +0900">21:58</time>),
+      local_datetime_tag(DATETIME)
+  end
 end
