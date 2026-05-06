@@ -2,6 +2,6 @@
   <div>
     <% starts_tag = local_datetime_tag(event.starts_at, style: :date) %>
     <% ends_tag = local_datetime_tag(event.ends_at, style: :date) %>
-    <%= safe_join([starts_tag, (ends_tag || "N/A"), h(event.name)], " | ") %>
+    <%= safe_join([h(event.name), starts_tag, (ends_tag || "N/A")], " | ") %>
   </div>
 <% end %>
