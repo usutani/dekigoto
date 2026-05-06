@@ -19,9 +19,7 @@ class TimeHelperTest < ActionView::TestCase
     assert_raises(ArgumentError, match: "Unknown style: foo.") do
       local_datetime(DATETIME, style: :foo)
     end
-    assert_raises(NoMethodError) do
-      local_datetime(nil)
-    end
+    assert_nil local_datetime(nil)
   end
 
   # TODO: タイムゾーンの設定方法
@@ -29,5 +27,6 @@ class TimeHelperTest < ActionView::TestCase
     assert_dom_equal \
       %(<time datetime="2020-02-26 21:58:19 +0900">21:58</time>),
       local_datetime_tag(DATETIME)
+    assert_nil local_datetime_tag(nil)
   end
 end

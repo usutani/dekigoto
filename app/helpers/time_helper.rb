@@ -4,6 +4,8 @@ module TimeHelper
   DATETIME = "#{DATE} #{TIME}"
 
   def local_datetime(datetime, style: :time)
+    return if datetime.nil?
+
     format = case style
     when :time then TIME
     when :date then DATE
@@ -14,6 +16,8 @@ module TimeHelper
   end
 
   def local_datetime_tag(datetime, style: :time)
+    return if datetime.nil?
+
     tag.time datetime: datetime do local_datetime(datetime, style: style) end
   end
 end

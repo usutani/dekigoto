@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @events = Event.order(:started_at)
+    @events = Event.order(:starts_at)
   end
 end
