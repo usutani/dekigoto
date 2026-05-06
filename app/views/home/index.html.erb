@@ -1,5 +1,5 @@
 <% @events.each do |event| %>
   <div>
-    <%= local_datetime_tag(event.started_at, style: :date) %> | <%= event.name %>
+    <%= local_datetime_tag(event.starts_at, style: :date) %> | <%= event.name %>
   </div>
 <% end %>
